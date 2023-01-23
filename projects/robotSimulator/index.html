@@ -153,6 +153,33 @@
     On the left, the CAD model of the robot design. On the Right, the robot in Gazebo. 
 </div>
 
+<h4 id="robot-design">Robot Design</h4>
+<p>The robot you see on the left was born out of the requirements given by <a href="http://www.igvc.org/2023rules.pdf" rel="external nofollow noopener" target="_blank">IGVC</a>. The main requirements was that it needed to move at a speed no more than five miles per hour, and carry a twenty pound load. After some brainstorming and design revision, the Autonomous Robotics Club (ARC) arrived at the design shown. The robot’s chassis is a four wheel differential drivetrain.</p>
+
+<hr>
+<h4 id="cad">CAD</h4>
+<p>The Computer Aided Design (CAD) was done using Autodesk Inventor, the model can be simplified into two parts, the moving parts and the static parts. A file called an URDF file needs to be created using this CAD model in order to move forward with robot simulation. There are two ways to obtain an URDF file, define all the components by hand or tell a program to do it for me. Unfortunately the only plugin that creates URDF files is made for SolidWorks. The only components that need to be in the URDF are the base frame and moving parts, so I created a new component that simplified the frame and all the non moving components into one stationary block that had an identical size, center of mass, and moment of inertia. I then simplified the moving components down to wheels with axels attached. I saved these two components as .step files and opened them in SolidWorks to use to the plugin. After following the steps given in the plugin wizard out spit an URDF file that fully defined the physics of the robot. I then converted the CAD design into STL files. STL files define the look of the robot for our simulation software.</p>
+
+<hr>
+<h4 id="docker--ubuntu">Docker &amp; Ubuntu</h4>
+<p>Since I want this to be a base for my teammates to use to test their code, I want it to be portable. I created a docker image that is running ubuntu 20 and installs the requirements to run Gazebo, the robot simulation software. This image contains Robot Operating Software (ROS), Gazebo, NAV2, and various python libraries.</p>
+
+<hr>
+<h4 id="urdf-file">URDF File</h4>
+<p>Now that I have the start of the URDF file I can begin to better define the characteristics of my robot. Editing the URDF file I added the visual portion of the robot using the STL files. This took some trial and error, because the reference points for some components were not in the same location. I then added the plugins that NAV2 uses to control the wheels and get location data.</p>
+
+<hr>
+<h4 id="ros-launch--file-setup">Ros Launch &amp; File setup</h4>
+<p>Following the standard file system for ROS projects, I placed the mesh models, config files, and other required files in the directory. I then Colcon built the folder and ROS launched robot. This launched Gazebo and loaded the robot onto the default ground plain.</p>
+
+<hr>
+<h4 id="controlling--connecting-to-the-robot">Controlling &amp; Connecting to the Robot</h4>
+<p>This robot, through Nav2 and Gazebo, was hosting ROS topics for wheel odometry, velocity data, and a simulated 6-axis IMU. Running cmd_vel I could send velocity commands to the robot and it would drive and turn.</p>
+
+<hr>
+<h4 id="summary">Summary</h4>
+<p>With the ability to run one launch file and be presented with a robot ready to interact with, will give my coworkers the ability to run their code and work out the bugs prior to fabrication of the robot, as well as allowing multiple people to test their code at the same time.</p>
+
 <!--- 
 The code is simple.
 Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
