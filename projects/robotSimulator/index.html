@@ -154,31 +154,31 @@
 </div>
 
 <h4 id="robot-design">Robot Design</h4>
-<p>The robot you see on the left was born out of the requirements given by <a href="http://www.igvc.org/2023rules.pdf" rel="external nofollow noopener" target="_blank">IGVC</a>. The main requirements was that it needed to move at a speed no more than five miles per hour, and carry a twenty pound load. After some brainstorming and design revision, the Autonomous Robotics Club (ARC) arrived at the design shown. The robot’s chassis is a four wheel differential drivetrain.</p>
+<p>The robot on display was designed and developed by the Autonomous Robotics Club (ARC) to meet the specifications set by the <a href="http://www.igvc.org/2023rules.pdf" rel="external nofollow noopener" target="_blank">Intelligent Ground Vehicle Competition</a> (IGVC). The primary requirements included a maximum speed of five miles per hour and a load carrying capacity of twenty pounds. The design process involved extensive brainstorming and iterative revisions, ultimately resulting in the four-wheel differential drivetrain chassis that is currently showcased.</p>
 
 <hr>
 <h4 id="cad">CAD</h4>
-<p>The Computer Aided Design (CAD) was done using Autodesk Inventor, the model can be simplified into two parts, the moving parts and the static parts. A file called an URDF file needs to be created using this CAD model in order to move forward with robot simulation. There are two ways to obtain an URDF file, define all the components by hand or tell a program to do it for me. Unfortunately the only plugin that creates URDF files is made for SolidWorks. The only components that need to be in the URDF are the base frame and moving parts, so I created a new component that simplified the frame and all the non moving components into one stationary block that had an identical size, center of mass, and moment of inertia. I then simplified the moving components down to wheels with axels attached. I saved these two components as .step files and opened them in SolidWorks to use to the plugin. After following the steps given in the plugin wizard out spit an URDF file that fully defined the physics of the robot. I then converted the CAD design into STL files. STL files define the look of the robot for our simulation software.</p>
+<p>The Computer-Aided Design (CAD) of the robot was conducted using Autodesk Inventor, with the model simplified into two distinct parts: the moving components and the static components. To proceed with the robot simulation, a file known as an URDF file was created from the CAD model. The URDF file can be obtained through two methods: manual definition of the components or utilizing a program. Unfortunately, the only available plugin for creating URDF files is for SolidWorks. To ensure that only the essential components were included in the URDF file, I created a new component that consolidated the frame and non-moving components into a single stationary block with identical size, center of mass, and moment of inertia. The moving components were then simplified to wheels with attached axles. These two components were saved as .step files and imported into SolidWorks for use with the plugin. Following the steps provided by the plugin wizard generated an URDF file that fully defined the physics of the robot. The CAD design was then converted into STL files, which defined the visual appearance of the robot for our simulation software.</p>
 
 <hr>
 <h4 id="docker--ubuntu">Docker &amp; Ubuntu</h4>
-<p>Since I want this to be a base for my teammates to use to test their code, I want it to be portable. I created a docker image that is running ubuntu 20 and installs the requirements to run Gazebo, the robot simulation software. This image contains Robot Operating Software (ROS), Gazebo, NAV2, and various python libraries.</p>
+<p>In order to provide a foundation for my teammates to test their code, it was important to ensure the design was portable. To achieve this, I created a Docker image running Ubuntu 20 that includes all necessary components for running the Gazebo robot simulation software. The image includes Robot Operating System (ROS), Gazebo, NAV2, and various Python libraries, making it readily accessible for testing and development.</p>
 
 <hr>
 <h4 id="urdf-file">URDF File</h4>
-<p>Now that I have the start of the URDF file I can begin to better define the characteristics of my robot. Editing the URDF file I added the visual portion of the robot using the STL files. This took some trial and error, because the reference points for some components were not in the same location. I then added the plugins that NAV2 uses to control the wheels and get location data.</p>
+<p>With the initial URDF file in place, I was able to further define the characteristics of the robot. I incorporated the visual aspect of the robot, utilizing the STL files, which required some adjustments to align the reference points of the components. Once this was completed, I added the necessary plugins for NAV2 to control the wheels and gather location data, allowing for a more robust and accurate simulation.</p>
 
 <hr>
 <h4 id="ros-launch--file-setup">Ros Launch &amp; File setup</h4>
-<p>Following the standard file system for ROS projects, I placed the mesh models, config files, and other required files in the directory. I then Colcon built the folder and ROS launched robot. This launched Gazebo and loaded the robot onto the default ground plain.</p>
+<p>In accordance with the established file system for ROS projects, I properly organized and placed the mesh models, configuration files, and other necessary files in the appropriate directory. I then utilized the Colcon build process and executed the ROS launch command to launch Gazebo and load the robot onto the default ground plane.</p>
 
 <hr>
 <h4 id="controlling--connecting-to-the-robot">Controlling &amp; Connecting to the Robot</h4>
-<p>This robot, through Nav2 and Gazebo, was hosting ROS topics for wheel odometry, velocity data, and a simulated 6-axis IMU. Running cmd_vel I could send velocity commands to the robot and it would drive and turn.</p>
+<p>The robot, utilizing the capabilities of Nav2 and Gazebo, was configured to host ROS topics for wheel odometry, velocity data, and a simulated six-axis Inertial Measurement Unit (IMU). By executing the cmd_vel command, I was able to transmit velocity commands to the robot, allowing for dynamic control of its movement and direction.</p>
 
 <hr>
 <h4 id="summary">Summary</h4>
-<p>With the ability to run one launch file and be presented with a robot ready to interact with, will give my coworkers the ability to run their code and work out the bugs prior to fabrication of the robot, as well as allowing multiple people to test their code at the same time.</p>
+<p>The implementation of a single launch file provides a convenient and efficient method for accessing a fully functional robot simulation, allowing for streamlined testing and debugging of code by multiple team members prior to physical fabrication. This approach significantly improves the development process and ensures that any potential issues are identified and resolved before the construction phase.</p>
 
 <!--- 
 The code is simple.
