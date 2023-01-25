@@ -111,8 +111,29 @@
           </header>
 
           <article>
-            <h4 id="preface">Preface</h4>
-<p>This project aims to develop a swerve drive design for independently controlled wheels, similar to those used in the FIRST Robotics Competition (FRC) and NASA’s Modular Robotic Vehicle (MRV). The objective is to create an inexpensive solution for software development and to gain a deeper understanding of the functioning of these drive trains.</p>
+            <div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/SwerveRobot-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/SwerveRobot-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/SwerveRobot-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/SwerveRobot.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="Swerve Robot" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+
+<h4 id="preface">Preface</h4>
+<p>This project aims to develop a swerve drive design for independently controlled wheels, similar to those used in the FIRST Robotics Competition (FRC) and NASA’s Modular Robotic Vehicle (MRV). The objective is to create an inexpensive solution for software development and to gain a deeper understanding of how these drive trains function.</p>
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -136,18 +157,38 @@
 </div>
 
 <h4 id="basic-concepts">Basic Concepts</h4>
+<p>The fundamental concept behind a swerve drive train is to provide exceptional maneuverability while preserving torque and traction. This is achieved through the independent control of each wheel in terms of direction and velocity. However, it should be noted that the design necessitates precise measurement to constantly monitor the orientation of each wheel, and may be more costly and intricate due to the number of components and motors required for a single module.</p>
 
 <hr>
 
 <h4 id="design-choices">Design Choices</h4>
+<p>Swerve drive systems typically feature two motors, one for controlling direction and the other for velocity, an encoder to monitor direction, and high-traction wheels. In this specific design, an effort was made to 3D print as many components as possible, resulting in a relatively simple design optimized for 3D printing. The only exceptions to this were the wheel, sprockets, bevel gears, locking collars, and bearings.</p>
+
+<p>The direction and velocity motors are mounted on the frame. The direction motor utilizes a 1:1 gear ratio between the motor and a rotating module, and is coupled with a secondary gear in contact with an absolute encoder for precise direction measurement. The velocity motor is more complex, featuring an initial gear ratio before transfer to the main drive shaft. The main drive shaft runs vertically through the center of the swerve drive system, turns 90 degrees with the aid of a pair of bevel gears, and then drives a 10-tooth sprocket connected to a 32-tooth sprocket, which is in turn connected to the wheel hub. The wheel and wheel hub are mounted on a half-inch bolt, serving as a dead axle.</p>
+
+<hr>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+                <img style="float: left; width: 100%; height: 100%;" src="/assets/img/FabricatedSwerveFull.png" class="img-fluid rounded z-depth-1">
+            </div>
+            <div class="row">
+                <img width="50%" src="/assets/img/Module.png" class="img-fluid rounded z-depth-1">
+                <img width="50%" src="/assets/img/SwerveTop.png" class="img-fluid rounded z-depth-1">
+            </div>
+        </div> 
+        <div class="col-md-6">
+            <video id="SwerveVid" width="79%" class="video-js vjs-default-skin" src="../../assets/img/SwerveVid.webm" type="video/mp4" autoplay="" loop="">
+            </video>
+        </div> 
+    </div>
+</div>
 
 <hr>
 
-<h4 id="final-product">Final Product?</h4>
-
-<hr>
-
-<h4 id="summary">Summary</h4>
+<h4 id="final-product">Final Product</h4>
+<p>The final outcome of this project is a design that can be fully fabricated using 3D printing techniques. The accompanying images illustrate the completed product, which has been integrated into an aluminum chassis (this could be substituted with 8020 extrusion). It was assembled with FRC electronics and a basic control program was implemented to initiate testing.</p>
 
           </article>
 
