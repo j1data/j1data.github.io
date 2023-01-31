@@ -10,9 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>3D Printable Swerve Drive Chassis | Justin E. Pullman</title>
+    <title>Joystick | Justin E. Pullman</title>
     <meta name="author" content="Justin E. Pullman">
-    <meta name="description" content="To create an inexpensive solution for software development and to gain a deeper understanding of how these drive trains function.">
+    <meta name="description" content="A custom joystick and buttons for control of robotics systems.">
 
 
     <!-- Bootstrap & MDB -->
@@ -32,7 +32,7 @@
     <link rel="shortcut icon" href="/assets/img/protector.jpg">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="http://localhost:4000/projects/swerveDrive/">
+    <link rel="canonical" href="http://localhost:4000/projects/joystick/">
     
     <!-- Dark Mode -->
     
@@ -106,8 +106,8 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">3D Printable Swerve Drive Chassis</h1>
-            <p class="post-description">To create an inexpensive solution for software development and to gain a deeper understanding of how these drive trains function.</p>
+            <h1 class="post-title">Joystick</h1>
+            <p class="post-description">A custom joystick and buttons for control of robotics systems.</p>
           </header>
 
           <article>
@@ -117,37 +117,49 @@
 
   <picture>
     
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/SwerveRobot-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/SwerveRobot-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/SwerveRobot-1400.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/JoystickFront-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/JoystickFront-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/JoystickFront-1400.webp"></source>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/SwerveRobot.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="Swerve Robot" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/JoystickFront.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="Joystick Front" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
 </figure>
 
     </div>
-</div>
-
-<h4 id="preface">Preface</h4>
-<p>This project aims to develop a swerve drive design for independently controlled wheels, similar to those used in the FIRST Robotics Competition (FRC) and NASA’s Modular Robotic Vehicle (MRV). The objective is to create an inexpensive solution for software development and to gain a deeper understanding of how these drive trains function.</p>
-
-<div class="row">
     <div class="col-sm mt-3 mt-md-0">
         <figure>
 
   <picture>
     
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/SwerveRobotDiagram-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/SwerveRobotDiagram-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/SwerveRobotDiagram-1400.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/JoystickBackOpen-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/JoystickBackOpen-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/JoystickBackOpen-1400.webp"></source>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/SwerveRobotDiagram.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="Parts of Swerve" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/JoystickBackOpen.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="Joystick Back Open" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+
+</figure>
+
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/JoystickBackClosed-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/JoystickBackClosed-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/JoystickBackClosed-1400.webp"></source>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/JoystickBackClosed.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="Joystick Back Closed" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
@@ -156,39 +168,73 @@
     </div>
 </div>
 
-<h4 id="basic-concepts">Basic Concepts</h4>
-<p>The fundamental concept behind a swerve drive train is to provide exceptional maneuverability while preserving torque and traction. This is achieved through the independent control of each wheel in terms of direction and velocity. However, it should be noted that the design necessitates precise measurement to constantly monitor the orientation of each wheel, and may be more costly and intricate due to the number of components and motors required for a single module.</p>
+<h4 id="design">Design</h4>
+<p>The objective of this project is to develop a handheld remote control system for robotic systems. The device comprises a 3-axis joystick, three buttons, and an Arduino Micro microcontroller. The Arduino Micro captures three analog signals from the joystick potentiometers and three digital signals from the buttons. The buttons trigger the connection of ground to their signal pin when pressed. When connected to a computer, the Arduino Micro emulates a gamepad input device.</p>
 
 <hr>
 
-<h4 id="design-choices">Design Choices</h4>
-<p>Swerve drive systems typically feature two motors, one for controlling direction and the other for velocity, an encoder to monitor direction, and high-traction wheels. In this specific design, an effort was made to 3D print as many components as possible, resulting in a relatively simple design optimized for 3D printing. The only exceptions to this were the wheel, sprockets, bevel gears, locking collars, and bearings.</p>
+<h4 id="code">Code</h4>
+<pre>
+<code class="language-python">
+#include "Joystick.h"
 
-<p>The direction and velocity motors are mounted on the frame. The direction motor utilizes a 1:1 gear ratio between the motor and a rotating module, and is coupled with a secondary gear in contact with an absolute encoder for precise direction measurement. The velocity motor is more complex, featuring an initial gear ratio before transfer to the main drive shaft. The main drive shaft runs vertically through the center of the swerve drive system, turns 90 degrees with the aid of a pair of bevel gears, and then drives a 10-tooth sprocket connected to a 32-tooth sprocket, which is in turn connected to the wheel hub. The wheel and wheel hub are mounted on a half-inch bolt, serving as a dead axle.</p>
+#define NUMPINS = 3;
 
-<hr>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="row">
-                <img style="float: left; width: 100%; height: 100%;" src="/assets/img/FabricatedSwerveFull.png" class="img-fluid rounded z-depth-1">
-            </div>
-            <div class="row">
-                <img width="50%" src="/assets/img/Module.png" class="img-fluid rounded z-depth-1">
-                <img width="50%" src="/assets/img/SwerveTop.png" class="img-fluid rounded z-depth-1">
-            </div>
-        </div> 
-        <div class="col-md-6">
-            <video id="SwerveVid" width="79%" class="video-js vjs-default-skin" src="../../assets/img/SwerveVid.webm" type="video/mp4" autoplay="" loop="">
-            </video>
-        </div> 
-    </div>
-</div>
+Joystick_ Joystick;
 
-<hr>
+void setup() {
+    pinMode(2, INPUT_PULLUP);
+    pinMode(5, INPUT_PULLUP);
+    pinMode(6, INPUT_PULLUP);
 
-<h4 id="final-product">Final Product</h4>
-<p>The final outcome of this project is a design that can be fully fabricated using 3D printing techniques. The accompanying images illustrate the completed product, which has been integrated into an aluminum chassis (this could be substituted with 8020 extrusion). It was assembled with FRC electronics and a basic control program was implemented to initiate testing.</p>
+    pinMode(A3, INPUT_PULLUP);
+    pinMode(A2, INPUT_PULLUP);
+    pinMode(A1, INPUT_PULLUP);
+
+    Joystick.begin();
+    Joystick.setXAxisRange(-127,127);
+    Joystick.setYAxisRange(-127,127);
+    Joystick.setZAxisRange(-127,127);
+
+    int pinList[NUMPINS] = {2,5,6};
+    int lastButtonState[NUMPINS] = {0,0,0};
+}
+
+void loop() {
+    float XAxisValue = float((analogRead(A3)-520.0)/503.0) * -1.0;
+    if (XAxisValue &gt;= -0.10 &amp;&amp; XAxisValue &lt;= 0.10) XAxisValue = 0;
+    Joystick.setXAxis(XAxisValue*127.0);
+
+    float YAxisValue = float((analogRead(A2)-520.0)/503.0) * -1.0;
+    if (YAxisValue &gt;= -0.10 &amp;&amp; YAxisValue &lt;= 0.10) YAxisValue = 0;
+    Joystick.setYAxis(YAxisValue*127.0);
+    
+    float ZAxisValue = float((analogRead(A1)-520)/503.0) * -1.0;
+    if (ZAxisValue &gt;= -0.10 &amp;&amp; ZAxisValue &lt;= 0.10) ZAxisValue = 0;
+    Joystick.setZAxis(ZAxisValue*127.0);
+
+    for(int i=0; i &lt; NUMPINS; i++){
+        int currentButtonState = !digitalRead(pinList[i]);
+        if (currentButtonState != lastButtonState[i]){
+            switch(i){
+                case 0: // Button 1
+                    Joystick.setButton(2, currentButtonState);
+                break;
+                case 1: // Button 2
+                    Joystick.setButton(0, currentButtonState);
+                break;
+                case 2: // Button 3
+                    Joystick.setButton(1, currentButtonState);
+                break;
+            }
+        
+            lastButtonState[i] = currentButtonState;
+        }
+    }
+    delay(10);
+}
+</code>
+</pre>
 
           </article>
 
