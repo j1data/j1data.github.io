@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@layer base {
+  body {
+    @apply font-[Raleway];
+  }
+  li {
+    @apply px-4;
+    @apply cursor-pointer;
+  }
+}
+
+.content-div {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 250px;
+  width: 275px;
+  opacity: 1;
+  transition: opacity 0.5 ease;
+}
+
+.content-div:hover {
+
+}
+
+.text-div {
+  position: relative;
+  z-index: 1; /* Ensure the text is on top of the background image */
+  opacity: 0; /* Hide the text by default */
+  transition: opacity 0.5s ease; /* Adjust transition duration and timing function as needed */
+}
+
+.content-div:hover .text-div {
+  opacity: 1; /* Ensure the text remains at 100% opacity when hovering */
+}
