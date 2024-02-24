@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.834f54ff.css",
-    "main.js": "/static/js/main.abadb89a.js",
+    "main.js": "/static/js/main.8cf36813.js",
     "static/media/MothershipFrame091523.png": "/static/media/MothershipFrame091523.fcdc55648dd7278ca503.png",
     "static/media/JoystickComponentCallout.png": "/static/media/JoystickComponentCallout.2f58b232383f20625cd7.png",
     "static/media/JoystickNoBack.png": "/static/media/JoystickNoBack.e8e5bf7992702577e444.png",
@@ -54,10 +54,10 @@
     "static/media/AnsysLogo.png": "/static/media/AnsysLogo.c7c1cf43cf4737e7d5e7.png",
     "index.html": "/index.html",
     "main.834f54ff.css.map": "/static/css/main.834f54ff.css.map",
-    "main.abadb89a.js.map": "/static/js/main.abadb89a.js.map"
+    "main.8cf36813.js.map": "/static/js/main.8cf36813.js.map"
   },
   "entrypoints": [
     "static/css/main.834f54ff.css",
-    "static/js/main.abadb89a.js"
+    "static/js/main.8cf36813.js"
   ]
 }
