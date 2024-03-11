@@ -1,12 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.834f54ff.css",
-    "main.js": "/static/js/main.4c877028.js",
+    "main.css": "/static/css/main.9f861410.css",
+    "main.js": "/static/js/main.8040f82e.js",
     "static/media/MothershipFrame091523.png": "/static/media/MothershipFrame091523.fcdc55648dd7278ca503.png",
     "static/media/JoystickComponentCallout.png": "/static/media/JoystickComponentCallout.2f58b232383f20625cd7.png",
     "static/media/JoystickNoBack.png": "/static/media/JoystickNoBack.e8e5bf7992702577e444.png",
+    "static/media/ParkingTop.png": "/static/media/ParkingTop.702e71c6fd16a690adca.png",
     "static/media/ProfPictureBlue.png": "/static/media/ProfPictureBlue.baabde3142bfcf8d65de.png",
     "static/media/FRC2018Bot.png": "/static/media/FRC2018Bot.e710d410640eb62fbb8a.png",
+    "static/media/ParkingHero.png": "/static/media/ParkingHero.f40c963ffab2f12227ee.png",
     "static/media/SparroPrototype.png": "/static/media/SparroPrototype.6dfa20ca6cd331c552f5.png",
     "static/media/FRC2016Bot.png": "/static/media/FRC2016Bot.9cfb1d7afadf4da2271e.png",
     "static/media/SparroStorage.png": "/static/media/SparroStorage.ed595dd99a6ddae00476.png",
@@ -17,11 +19,14 @@
     "static/media/MD_ISO_Render3.png": "/static/media/MD_ISO_Render3.0169d69aec66e271072d.png",
     "static/media/SparroDeployment.png": "/static/media/SparroDeployment.11f935702cb4e84abfde.png",
     "static/media/SparroElectronicsD.png": "/static/media/SparroElectronicsD.e2216a91a9d6a0d9d5e0.png",
+    "static/media/ThorFront.png": "/static/media/ThorFront.c66449fde37e5f36a7ff.png",
+    "static/media/ThorIso.png": "/static/media/ThorIso.6186260990defdaa4341.png",
     "static/media/SparroConnectionsM.png": "/static/media/SparroConnectionsM.2de88ee3a9656a235423.png",
     "static/media/SparroConnectionsD.png": "/static/media/SparroConnectionsD.c10253b9649546ff494b.png",
     "static/media/SparroElectronicsM.png": "/static/media/SparroElectronicsM.ddb084c30c2a56566a9d.png",
     "static/media/FRCBotNoBack.png": "/static/media/FRCBotNoBack.4c6cdbe43db9ae6e3106.png",
     "static/media/SparroStructuresM.png": "/static/media/SparroStructuresM.836251cb4a2ec731bfd9.png",
+    "static/media/ParkingDiagram.png": "/static/media/ParkingDiagram.de2f3541ea7991bc4260.png",
     "static/media/SparroDimensioned.png": "/static/media/SparroDimensioned.fcd1a447d77eb8d0f8e2.png",
     "static/media/SparroStructuresD.png": "/static/media/SparroStructuresD.21c68be04dee1c1744c2.png",
     "static/media/CncMill.png": "/static/media/CncMill.40becdb17efd9cbc196c.png",
@@ -45,19 +50,19 @@
     "static/media/robotgazebo.png": "/static/media/robotgazebo.2e66f8e052e49fc4a5f6.png",
     "static/media/RegPullmanNoBack.png": "/static/media/RegPullmanNoBack.f888c995597f675d3755.png",
     "static/media/SwerveLazySusanUpClose.png": "/static/media/SwerveLazySusanUpClose.9941d80d820c03359f58.png",
+    "static/media/Resume.pdf": "/static/media/Resume.c5ec5cfe17a52a1b0cb6.pdf",
     "static/media/CplusLogo.png": "/static/media/CplusLogo.f6fe949d2f7c054e550d.png",
-    "static/media/Resume.pdf": "/static/media/Resume.b37322f1b31ab57e76d8.pdf",
     "static/media/ArduinoLogo.png": "/static/media/ArduinoLogo.e91077964f0d2f050d37.png",
     "static/media/MatlabLogo.png": "/static/media/MatlabLogo.51a4886bbb34279e1bf5.png",
     "static/media/CLogo.png": "/static/media/CLogo.30e8acff157f8fa06702.png",
     "static/media/3DPrintLogo.png": "/static/media/3DPrintLogo.0350a92b70456e8c4a37.png",
     "static/media/AnsysLogo.png": "/static/media/AnsysLogo.c7c1cf43cf4737e7d5e7.png",
     "index.html": "/index.html",
-    "main.834f54ff.css.map": "/static/css/main.834f54ff.css.map",
-    "main.4c877028.js.map": "/static/js/main.4c877028.js.map"
+    "main.9f861410.css.map": "/static/css/main.9f861410.css.map",
+    "main.8040f82e.js.map": "/static/js/main.8040f82e.js.map"
   },
   "entrypoints": [
-    "static/css/main.834f54ff.css",
-    "static/js/main.4c877028.js"
+    "static/css/main.9f861410.css",
+    "static/js/main.8040f82e.js"
   ]
 }
